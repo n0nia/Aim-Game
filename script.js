@@ -87,3 +87,17 @@ function getRandomNumber(min, max) {
     return Math.round(Math.random() * (max - min) + min);
 }
 
+function win() {
+    const clickInterval = setInterval(clickCircle, 50);
+
+    function clickCircle() {
+        const circle = document.querySelector('.circle');
+    
+        if(circle) {
+            circle.click();
+        }
+        else {
+            clearInterval(clickInterval);
+        }
+    }
+}
