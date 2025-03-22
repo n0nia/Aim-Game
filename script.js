@@ -21,10 +21,15 @@ timeList.addEventListener('click', (event) => {
     }
 });
 
+
 board.addEventListener('click', (event) => {
     if(event.target.classList.contains('circle')) {
         score++;
-        event.target.remove();
+        event.target.style.background = '#A020F0';
+        setTimeout(() => {
+            event.target.remove();
+          }, 50); 
+
         createRandomCircle();
     }
 });
